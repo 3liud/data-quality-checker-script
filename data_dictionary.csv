@@ -1,0 +1,24 @@
+column_name,data_type,min_value,max_value
+Student_ID,object,,
+First_Name,object,,
+Last_Name,object,,
+Email,object,,
+Gender,object,,
+Age,int64,18.0,34.0
+Department,object,,
+Attendance (%),float64,50.0,99.98
+Midterm_Score,float64,40.0,99.98
+Final_Score,float64,40.0,99.98
+Assignments_Avg,float64,50.0,99.98
+Quizzes_Avg,float64,50.03,99.96
+Participation_Score,float64,0.0,10.0
+Projects_Score,float64,50.01,98.89
+Total_Score,float64,50.27,99.11
+Grade,object,,
+Study_Hours_per_Week,float64,5.1,29.9
+Extracurricular_Activities,object,,
+Internet_Access_at_Home,object,,
+Parent_Education_Level,object,,
+Family_Income_Level,object,,
+Stress_Level (1-10),int64,1,10
+Sleep_Hours_per_Night,float64,4.0,9.0
