@@ -1,10 +1,10 @@
 # Data Quality Checker
 
-A simple yet Python-based data quality checking tool designed to automate common data quality validations on your datasets.
+A simple yet powerful Python-based data quality checking tool designed to automate common data quality validations on your datasets.
 
 ---
 
-## **Purpose:**
+## Purpose:
 This Python script automates the following data quality checks:
 
 - **Missing Values Check**: Detects and reports the percentage of missing values per column.
@@ -12,22 +12,39 @@ This Python script automates the following data quality checks:
 - **Data Types Validation**: Checks if the dataset columns match the expected data types defined in the data dictionary.
 - **Numeric Range Validation**: Ensures numeric columns have values within the specified min and max ranges.
 
-## **Prerequisites**
+## Prerequisites
 
 Make sure you have installed these Python packages:
 
 ```bash
-pip install pandas numpy
+pip install pandas numpy dash plotly
 ```
 
 ---
 
-## **Files Required**
+## Project Structure
 
-- **Your Dataset** (`your_dataset.csv`)
+```
+project_name/
+│
+├── data/
+│   ├── Students_Grading_Dataset.csv
+│   └── data_dictionary.csv
+│
+├── quality_checker.py
+├── dashboard.py
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Files Required
+
+- **Your Dataset** (`Students_Grading_Dataset.csv`)
 - **Data Dictionary** (`data_dictionary.csv`): A CSV defining expected column metadata.
 
-### **Data Dictionary Format**
+### Data Dictionary Format
 
 The `data_dictionary.csv` should follow this structure:
 
@@ -41,21 +58,33 @@ The `data_dictionary.csv` should follow this structure:
 
 ---
 
-## **Running the Script**
+## Running the Script
 
 Open your terminal and run:
 
 ```bash
-python checker.py your_dataset.csv
+python quality_checker.py Students_Grading_Dataset.csv
 ```
 
-Ensure `checker.py`, `your_dataset.csv`, and `data_dictionary.csv` are in the same directory or specify the full paths accordingly.
+Ensure you execute this command from the project's root directory.
 
 ---
 
-## **Script Breakdown**
+## Launching the Dashboard
 
-### **DataQualityChecker Class**
+To run the interactive data quality dashboard, execute:
+
+```bash
+python dashboard.py
+```
+
+Then, open a browser and navigate to the provided local address (typically `http://127.0.0.1:8050`).
+
+---
+
+## Script Breakdown
+
+### DataQualityChecker Class
 
 - **`check_missing_data()`**
   - Reports columns with missing data and their percentages.
@@ -71,33 +100,33 @@ Ensure `checker.py`, `your_dataset.csv`, and `data_dictionary.csv` are in the sa
 
 ---
 
-## **Example Usage**
+## Example Usage
 
 ```bash
-python checker.py Students_Grading_Dataset.csv
+python quality_checker.py Students_Grading_Dataset.csv
 ```
 
 **Output Example:**
 ```
 --- Data Quality Check Results ---
 
-⚠️ Missing Data Report (%):
+Missing Data Report (%):
 Attendance (%)            10.32
 Assignments_Avg           10.34
 Parent_Education_Level    35.88
 
 No Duplicate Rows Found.
 
-⚠️ Data Type Mismatches Found:
+Data Type Mismatches Found:
   - Age: Expected int64, got float64
 
-⚠️ Columns with out-of-range numeric values:
+Columns with out-of-range numeric values:
 Attendance (%): 2
 ```
 
 ---
 
-## **Future Enhancements:**
+## Future Enhancements:
 - Integration with interactive dashboards.
 - Automated reporting (PDF/HTML reports).
 - Logging for historical tracking of data quality issues.
@@ -105,3 +134,9 @@ Attendance (%): 2
 Feel free to customize this script for your specific data needs!
 
 ---
+
+## Author
+
+Your Name  
+Your Email  
+Your LinkedIn or GitHub URL
