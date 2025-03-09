@@ -135,8 +135,3 @@ Feel free to customize this script for your specific data needs!
 
 ---
 
-## Author
-
-Your Name  
-Your Email  
-Your LinkedIn or GitHub URL
