@@ -198,7 +198,7 @@ def main():
         print("Usage: python qualityChecker.py your_dataset.csv")
         sys.exit(1)
 
-    dataset_path = sys.argv[1]
+    dataset_path = os.path.join("data", sys.argv[1])
 
     if not os.path.exists(dataset_path):
         print(f"File '{dataset_path}' not found.")
@@ -215,7 +215,7 @@ def main():
     checker.validate_numeric_ranges()
 
 
-def load_data_dictionary(file_path="data_dictionary.csv"):
+def load_data_dictionary(file_path="data/data_dictionary.csv"):
     """
     Loads a data dictionary from the specified CSV file and returns it as a DataFrame.
 
